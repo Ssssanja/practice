@@ -13,6 +13,7 @@ public class Arrays2 {
         System.out.println("Введите число Z:"); //запрос данного z
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         int z = Integer.parseInt(reader.readLine());   // считывание введённого z
+        reader.close();
         for (int i = 0; i<a.length; i++){                         // перебор массива
             if (a[i]>z){                        // если элемент больше z
                 a[i] = z;                       // присвоить элементу значение z
