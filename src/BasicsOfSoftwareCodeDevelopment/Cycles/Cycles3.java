@@ -1,4 +1,4 @@
-package BasicsOfSoftwareCodeDevelopment;
+package BasicsOfSoftwareCodeDevelopment.Cycles;
 
 public class Cycles3 {
     public static void main(String[] args) {

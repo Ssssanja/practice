@@ -1,10 +1,10 @@
-package BasicsOfSoftwareCodeDevelopment;
+package BasicsOfSoftwareCodeDevelopment.Formula;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Formula1 {
+public class Formula2 {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Введите исходные числовые значения");
@@ -18,10 +18,10 @@ public class Formula1 {
         String itIsC = reader.readLine();
         System.out.println("Вы ввели число " + itIsC + " в качестве значения c");
         reader.close();
-        int a = Integer.parseInt(itIsA);
-        int b = Integer.parseInt(itIsB);
-        int c = Integer.parseInt(itIsC);
-        System.out.println("Значение функции z составляет " + (((a-3)*b/2)+c));
+        double a = Double.parseDouble(itIsA);
+        double b = Double.parseDouble(itIsB);
+        double c = Double.parseDouble(itIsC);
+        System.out.println("Значение выражения по формуле составляет " + (((b+Math.sqrt((Math.pow(b,2)+4*a*c)))/(2*a))-(Math.pow(a,3)*c)+Math.pow(b,-2)));
 
     }
 }

@@ -1,4 +1,4 @@
-package BasicsOfSoftwareCodeDevelopment;
+package BasicsOfSoftwareCodeDevelopment.Formula;
 
 import java.io.BufferedReader;
 import java.io.IOException;

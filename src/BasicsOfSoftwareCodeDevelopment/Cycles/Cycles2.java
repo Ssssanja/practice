@@ -1,4 +1,4 @@
-package BasicsOfSoftwareCodeDevelopment;
+package BasicsOfSoftwareCodeDevelopment.Cycles;
 
 import java.io.BufferedReader;
 import java.io.IOException;
