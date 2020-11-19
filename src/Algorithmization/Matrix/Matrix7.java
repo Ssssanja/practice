@@ -1,4 +1,4 @@
-package Algorithmization;
+package Algorithmization.Matrix;
 
 import java.io.BufferedReader;
 import java.io.IOException;

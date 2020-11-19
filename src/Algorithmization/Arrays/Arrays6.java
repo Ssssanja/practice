@@ -1,4 +1,4 @@
-package Algorithmization;
+package Algorithmization.Arrays;
 
 import java.math.BigInteger;
 
