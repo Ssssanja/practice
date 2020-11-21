@@ -10,8 +10,8 @@ public class Matrix14 {
         System.out.println("Введите m:");
         int m = Integer.parseInt(reader.readLine());
         System.out.println("Введите n:");
-        reader.close();
         int n = Integer.parseInt(reader.readLine());
+        reader.close();
         if ((n-m)>1){
             System.out.println("вы хотите впихнуть " + (n-1) + " единиц в столбик под максимальным индексом " + m + "\n давайте другие числа в следующий раз");
         }
@@ -39,13 +39,13 @@ public class Matrix14 {
     }
 
     static void fillColumn (int [][] matrix, int column, int m) {            //метод, заполнающий столбец единичками в рандомных местах
-            int times = column;
-            while (times>0){
-                int randomindex = (int) (Math.random() * (m));
-                if (matrix[randomindex][column]==0){
-                    matrix[randomindex][column]=1;
-                    times--;
-                }
+        int times = column;
+        while (times>0){
+            int randomindex = (int) (Math.random() * (m));
+            if (matrix[randomindex][column]==0){
+                matrix[randomindex][column]=1;
+                times--;
             }
+        }
     }
 }
