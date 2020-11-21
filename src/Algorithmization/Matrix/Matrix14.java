@@ -10,6 +10,7 @@ public class Matrix14 {
         System.out.println("Введите m:");
         int m = Integer.parseInt(reader.readLine());
         System.out.println("Введите n:");
+        reader.close();
         int n = Integer.parseInt(reader.readLine());
         if ((n-m)>1){
             System.out.println("вы хотите впихнуть " + (n-1) + " единиц в столбик под максимальным индексом " + m + "\n давайте другие числа в следующий раз");
