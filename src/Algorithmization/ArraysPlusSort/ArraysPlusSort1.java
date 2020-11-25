@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class ArraysPlusSort {
+public class ArraysPlusSort1 {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in)); //запрос индекса
         System.out.println("Введите k (индекс для вставки, от 0 до 10):");
