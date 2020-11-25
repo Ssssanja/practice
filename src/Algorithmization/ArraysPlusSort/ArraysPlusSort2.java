@@ -1,13 +1,9 @@
 package Algorithmization.ArraysPlusSort;
 
-import java.io.IOException;
-
 public class ArraysPlusSort2 {
     public static void main(String[] args){
         int[]arrayFirst = new int[((int)((Math.random()*10) + 5))];                                                      //инициализация массивов
         int[]arraySecond = new int[arrayFirst.length + ((int)(Math.random()*10) + 1)];
-        int n = (int)(Math.PI*arrayFirst.length);                                                                        //рандомное заполнение, но с увеличением
-        int m = n+1;
         arrayFirst[0] = 0;
         for (int i = 1; i<arrayFirst.length; i++){
             arrayFirst[i] = arrayFirst[i-1] + ((int)(Math.random()*3));
@@ -16,8 +12,10 @@ public class ArraysPlusSort2 {
         for (int i = 1; i<arraySecond.length; i++){
             arraySecond[i] = arraySecond[i-1] + ((int)(Math.random()*3));
         }
+
         int min = arrayFirst[0];                                                            //переменная для хранения минимума
         int max = arraySecond[0];                                                           //переменная для хранения максимума
+
         System.out.println("Массив 1: ");
         for (int x : arrayFirst){                                                           //вывод массивов на печать
             System.out.print(x + " ");                                                      //с одновременным поиском мин и макс в обоих массивах
@@ -29,6 +27,7 @@ public class ArraysPlusSort2 {
             }
         }
         System.out.println();
+
         System.out.println("Массив 2: ");
         for (int x : arraySecond){
             System.out.print(x + " ");
@@ -39,6 +38,7 @@ public class ArraysPlusSort2 {
                 max = x;
             }
         }
+
         int index = 0;                                                                      //счётчик для указания позиции в третьем массиве
         int[]arrayThird = new int[(arrayFirst.length+arraySecond.length)];                  //инициализация третьего массива размером как вместе взятые первый и второй
         do{                                                                                 //ду-уайл
@@ -59,7 +59,7 @@ public class ArraysPlusSort2 {
                     match = true;
                 }
             }
-            if (match == false){                                                            //если совпадений не было - инкремент минимума
+            if (!match){                                                            //если совпадений не было - инкремент минимума
                 min++;
             }
 
