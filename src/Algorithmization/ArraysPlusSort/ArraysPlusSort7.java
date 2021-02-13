@@ -17,7 +17,23 @@ public class ArraysPlusSort7 {
             System.out.println("Имеется два массива:");
             System.out.println(Arrays.toString(a));
             System.out.println(Arrays.toString(b));
-
+            int before;
+            int after;
+            for (int j : b) {
+                int x = findIndexToInsert(j, a);
+                if (x == 0) {
+                    System.out.printf("Число %d массива b нужно вставить " +
+                            "перед началом массива а (перед числом %d массива а)\n", j, a[0]);
+                } else if (x == n) {
+                    System.out.printf("Число %d массива b нужно вставить " +
+                            "после массива а (после числа %d массива а)\n", j, a[a.length - 1]);
+                } else {
+                    before = x - 1;
+                    after = x;
+                    System.out.printf("Число %d массива b нужно вставить " +
+                            "между числами массива а %d и %d\n", j, a[before], a[after]);
+                }
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -37,6 +53,28 @@ public class ArraysPlusSort7 {
                 }
                 result[i] = x;
             }
+        }
+        return result;
+    }
+    private static int findIndexToInsert(int x, int[]array){
+        int result = 0;
+        for (int i = 0; i<array.length;i++){
+                if (x < array[i]) {
+                    result = i;
+                    break;
+                }
+                else {
+                    for (int j = i;j<array.length;){
+                        if (x>=array[j]){
+                            j++;
+                        }
+                        if (j == array.length-i){
+                            result = j-1;
+                        }
+                        else result=j;
+                        break;
+                    }
+                }
         }
         return result;
     }
